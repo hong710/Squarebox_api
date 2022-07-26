@@ -10,6 +10,7 @@ const userRoute = require('./routes/user.route');
 
 //essential middlwares
 app.use(express.json());
+require('express-file-logger')(app)
 
 
 /*API end-points*/

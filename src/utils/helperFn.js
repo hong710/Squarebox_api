@@ -11,7 +11,24 @@ const decryptStr = (str, decryptKey)=>{
     return encryptStr
 }
 
+
+//not display any data in the arr
+const limitData = (obj, arr)=>{
+    const newObj = {...obj}
+
+    arr.forEach(element => {
+        delete newObj[element]
+    });
+
+    return newObj;
+}
+
+
+
+
+
 module.exports = {
     encryptStr,
-    decryptStr
+    decryptStr,
+    limitData
 }
