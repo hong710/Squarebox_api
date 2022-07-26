@@ -1,8 +1,9 @@
+const { updateUser } = require('../controllers/user.controller');
+const { verifyAuth } = require('../utils/routes/verifyUser');
+
 const router = require('express').Router();
 
-router.get('/usertest', (req, res)=>{
-    res.send("user test is sucessfully created");
-})
+router.patch('/:id',verifyAuth,updateUser)
 
 
 module.exports = router

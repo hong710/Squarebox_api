@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 //require routes
 const authRoute = require('./routes/auth.route');
+const userRoute = require('./routes/user.route');
 
 //essential middlwares
 app.use(express.json());
@@ -13,7 +14,10 @@ app.use(express.json());
 
 /*API end-points*/
 //auth routes
-app.use("/api/auth",authRoute) 
+app.use("/api/auth",authRoute)
+
+//user routes
+app.use("/api/user",userRoute) 
 
 
 

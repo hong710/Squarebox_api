@@ -7,6 +7,7 @@ const {
 //Register user
 router.post("/register", registerUser)
 
+//login user
 router.post("/login", loginUser)
 
 //export to server.js
