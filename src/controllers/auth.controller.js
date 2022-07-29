@@ -41,7 +41,7 @@ const loginUser = async (req, res) => {
                 const accessToken = jwt.sign({
                     id:user._id,
                     isAdmin:user.isAdmin
-                }, process.env.JWT_KEY, {expiresIn:'3d'})
+                }, process.env.JWT_KEY, {expiresIn:'3h'})
                 
                 const {password: userPassword, ...other} = user._doc;
                 //return user object but not password

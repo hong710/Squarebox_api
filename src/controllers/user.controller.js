@@ -1,6 +1,7 @@
 //require model Object from models
 const User = require('../models/User')
 const CryptoJS = require('crypto-js');
+
 //helperFn
 const { limitData } = require('../utils/helperFn');
 
@@ -55,7 +56,7 @@ const getUsers = async (req,res)=>{
         const users = newUserQuery  
                     ? await User.find().sort({createdAt:-1}).limit(newUserLimit ||2) 
                     : await User.find();
-        console.log(newUserLimit)
+
         const returnUsers = users.map(user=> limitData(user._doc, ['password']))
         res.status(200).json(returnUsers);
     }catch(e){ 
@@ -63,9 +64,38 @@ const getUsers = async (req,res)=>{
     } 
 }
 
+const getUsersStats = async(req, res)=>{
+    const date = new Date();
+    //get the lastYear
+    const lastYear = new Date(date.setFullYear(date.getFullYear()-1))
+
+    try {
+        const data = await User.aggregate([
+            {$match: {createdAt:{$gte:lastYear}}},
+            {
+                $project:{
+                    month: {$month: "$createdAt"}
+                },
+            },
+            {
+                $group:{
+                    _id:"$month",
+                    total: {$sum: 1}
+                }   
+            }
+        ])
+
+        res.status(200).json(data)
+    }catch(e){
+        res.status(500).json({message: e.message})
+    }
+}
+
+
 module.exports = {
     updateUser,
     deleteUser,
     getUserByID,
     getUsers,
+    getUsersStats
 }

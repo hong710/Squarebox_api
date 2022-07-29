@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 //require routes
 const authRoute = require('./routes/auth.route');
 const userRoute = require('./routes/user.route');
+const productRoute = require('./routes/product.route');
 
 //essential middlwares
 app.use(express.json());
@@ -20,6 +21,8 @@ app.use("/api/auth",authRoute)
 //user routes
 app.use("/api/user",userRoute) 
 
+//product routes
+app.use("/api/product",productRoute) 
 
 
 mongoose.connect(process.env.MONGODB_URI)
