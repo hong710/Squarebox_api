@@ -15,7 +15,6 @@ const {
 } = require('../utils/routes/user.verification');
 
 
-
 //get user by ID only isAdmin=true
 router.get('/find/:id',verifyTokenAndAdmin, getUserByID)
 

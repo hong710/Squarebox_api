@@ -6,11 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "kill -9 $(lsof -t -i:4000) && nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "db-seed": "node ./src/databases_dev/seeds/products/product.js",
+    
+    "kill": "kill -9 $(lsof -t -i:4000)"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
@@ -18,6 +22,10 @@
     "http-status": "^1.5.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.4.6",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "stripe": "^9.16.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.3.0"
   }
 }

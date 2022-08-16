@@ -11,8 +11,13 @@ const updateUser = async (req, res) => {
         req.body.password = CryptoJS.AES.encrypt(req.body.password, process.env.CRYPTO_KEY).toString()
     }
     try {
+        const data = {
+            username: req.body.username,
+            password: req.body.password,
+            email: req.body.email
+        }
         const updatedUser = await User.findByIdAndUpdate(req.params.id, {
-            $set: req.body
+            $set: data
         },{new:true})
         
         const {password: updatedPassword, ...rest } = updatedUser._doc
@@ -71,7 +76,9 @@ const getUsersStats = async(req, res)=>{
 
     try {
         const data = await User.aggregate([
-            {$match: {createdAt:{$gte:lastYear}}},
+            {
+                $match: {createdAt:{$gte:lastYear}}
+            },
             {
                 $project:{
                     month: {$month: "$createdAt"}

@@ -1,0 +1,57 @@
+[
+    {
+        "slug":"processors",
+        "match": "Processors/CPUs",
+        "title":"Processors/CPUs",
+        "img": "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/641917_326652_01_front_zoom.jpg"
+    },
+    {
+        "slug":"motherboards",
+        "match": "Motherboards",
+        "title":"Motherboards",
+        "img":"https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/643623_342030_02_front_zoom.jpg"
+    },
+    {
+        "slug":"ram-memory",
+        "match": "Computer Memory",
+        "title":"Computer Memory",
+        "img": "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/616297_046177_01_front_zoom.jpg"
+    },
+    {
+        "slug":"graphics-cards",
+        "match": "Graphics Cards & Accessories",
+        "title":"Graphics Cards",
+        "img":"https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/628738_177923_01_front_zoom.jpg"
+    },
+    {
+        "slug":"data-storages",
+        "match": "Hard Drives & Data Storage",
+        "title":"Drives/Storage",
+        "img":"https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/628177_171363_01_front_zoom.jpg"
+    },
+    {
+        "slug":"power-supplies",
+        "match": "Power Supplies",
+        "title":"Power Supplies",
+        "img":"https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/646355_370379_02_front_zoom.jpg"
+    },
+    {
+        "slug":"cooling",
+        "match": "Air & Water Cooling",
+        "title":"Air & Water Cooling",
+        "img":"https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/644882_356196_01_front_zoom.jpg"
+    },
+    {
+        "slug":"computer-cases",
+        "match": "Computer Cases",
+        "title":"Computer Cases",
+        "img":"https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/626304_153593_01_front_zoom.jpg"
+    }
+]
+
+
+
+
+
+
+

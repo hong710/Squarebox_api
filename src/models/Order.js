@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-//one order can have many order items- one to many relationships
+//one user can have many orders- one to many relationships
 const OrderSchema = new mongoose.Schema({
-    userId: {type: String, required: true, unique: true},
+    userId: {type: String, required: true},
     products: [
         {
             productId:{type: String},
